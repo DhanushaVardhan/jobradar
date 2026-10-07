@@ -4,8 +4,15 @@ name: JobRadar pipeline
 # Free on public repositories (GitHub Actions minutes are unlimited for public repos).
 on:
   schedule:
-    - cron: "30 2 * * *"    # 08:00 IST: morning run (sends your personal digest)
-    - cron: "30 12 * * *"   # 18:00 IST: evening run
+    # GitHub starts scheduled runs on a best-effort basis: busy minutes like :00 and :30
+    # are often late and sometimes skipped. So each update has a main time and two backups
+    # at quieter minutes, and the gate job below lets a backup run only when it is needed.
+    - cron: "17 2 * * *"    # 07:47 IST: morning update, ready around 08:00 (sends your digest)
+    - cron: "47 2 * * *"    # 08:17 IST: backup
+    - cron: "17 3 * * *"    # 08:47 IST: backup
+    - cron: "17 12 * * *"   # 17:47 IST: evening update, ready around 18:00
+    - cron: "47 12 * * *"   # 18:17 IST: backup
+    - cron: "17 13 * * *"   # 18:47 IST: backup
   workflow_dispatch:
     inputs:
       digest:
@@ -22,14 +29,46 @@ permissions:
   contents: write     # push the database snapshot to the `data` branch
   pages: write        # deploy the website
   id-token: write     # required by deploy-pages
-  actions: write      # keep the schedule alive (see last step)
+  actions: write      # check earlier runs (gate) and keep the schedule alive (last step)
 
 concurrency:
   group: jobradar-pipeline
   cancel-in-progress: false
 
 jobs:
+  # Manual runs always go ahead. A scheduled run stops here if another run already
+  # updated the site in the last 2 hours (the main time worked, so the backups skip).
+  gate:
+    name: Check if an update is due
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      due: ${{ steps.check.outputs.due }}
+    steps:
+      - id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          due=true
+          if [ "$GITHUB_EVENT_NAME" = "schedule" ]; then
+            since="$(date -u -d '2 hours ago' +%Y-%m-%dT%H:%M:%SZ)"
+            runs="$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/pipeline.yml/runs?status=success&created=%3E%3D$since&per_page=20" \
+              --jq ".workflow_runs[] | select(.id != $GITHUB_RUN_ID) | .id" || true)"
+            for id in $runs; do
+              updated="$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$id/jobs" \
+                --jq '[.jobs[] | select(.name == "run" and .conclusion == "success")] | length' || echo 0)"
+              if [ "${updated:-0}" -gt 0 ]; then
+                due=false
+                echo "Run $id already updated the site in the last 2 hours, so this backup run stops here." >> "$GITHUB_STEP_SUMMARY"
+                break
+              fi
+            done
+          fi
+          echo "due=$due" >> "$GITHUB_OUTPUT"
+
   run:
+    needs: gate
+    if: needs.gate.outputs.due == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     environment:
