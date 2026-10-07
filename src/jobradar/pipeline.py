@@ -21,6 +21,7 @@ from jobradar.notify.telegram import Telegram, format_channel, format_digest
 from jobradar.site import build_site
 from jobradar.skills import SkillTaxonomy
 from jobradar.sources import ALL_SOURCES, SOURCE_PRIORITY
+from jobradar.sources.base import Source
 from jobradar.store import Store
 
 log = logging.getLogger(__name__)
@@ -64,10 +65,26 @@ async def fetch_all(
         transport=transport,
     ) as http:
         sources = [cls(http, config, known_ids=store.known_uids(cls.name)) for cls in ALL_SOURCES]
-        active = [s for s in sources if s.enabled()]
         skipped = {s.name: s.skip_reason() or "" for s in sources if not s.enabled()}
+        for s in sources:
+            if s.name not in skipped and (wait := cooldown(s, store)):
+                skipped[s.name] = wait
+        active = [s for s in sources if s.name not in skipped]
         nested = await asyncio.gather(*(s.fetch() for s in active))
         return [r for group in nested for r in group], skipped, http.request_count
+
+
+def cooldown(source: Source, store: Store) -> str | None:
+    """Skip reason for a source called less than `min_interval_hours` ago.
+
+    Some APIs ask for only a few calls a day (Remotive: at most 4). The setting keeps that
+    promise even when a run is retried by a backup schedule or started by hand.
+    """
+    hours = float(source.opts.get("min_interval_hours") or 0)
+    elapsed = age_days(store.last_attempt(source.name)) if hours > 0 else None
+    if elapsed is None or elapsed * 24 >= hours:
+        return None
+    return f"last called {elapsed * 24:.1f}h ago (min {hours:g}h between calls)"
 
 
 def ingest(config: Config, store: Store, results: list[TargetResult]) -> dict[str, Any]:
