@@ -163,12 +163,12 @@
     <section id="view-subscribe" class="view" hidden aria-labelledby="sub-title">
       <div class="hero">
         <h1 id="sub-title">Get new jobs without checking</h1>
-        <p>Follow any skill or city by RSS, join the Telegram channel, or use the open data in your own projects.</p>
+        <p>Follow any skill or city by RSS, or use the open data in your own projects.</p>
       </div>
       <div class="grid-2">
         <div class="panel">
           <h2>RSS feeds</h2>
-          <p class="hint">Paste a feed link into any reader (Feedly, Inoreader, Thunderbird) or an RSS-to-Telegram/Discord bot.</p>
+          <p class="hint">Paste a feed link into any feed reader, such as Feedly, Inoreader or Thunderbird.</p>
           <div class="feed-list" id="feeds-main"></div>
           <div class="field-row" style="margin-top:14px">
             <label class="field"><span>By skill</span><select id="feed-skill"></select></label>
@@ -177,10 +177,12 @@
           <div class="feed-list" id="feeds-picked"></div>
         </div>
         <div class="panel">
-          <h2>Telegram</h2>
-          <p class="hint" id="tg-hint">A public channel posts the best new jobs every morning and evening.</p>
-          <p id="tg-link"></p>
-          <h2 style="margin-top:22px">Open data</h2>
+          <div id="tg-section" hidden style="margin-bottom:22px">
+            <h2>Telegram</h2>
+            <p class="hint">A public channel posts the best new jobs every morning and evening.</p>
+            <p id="tg-link"></p>
+          </div>
+          <h2>Open data</h2>
           <p class="hint">Free to use in your own projects. Please link back to the original posting.</p>
           <div class="feed-list">
             <div class="feed"><code>data/jobs.json</code><span class="via">every open job, AI-enriched</span></div>
@@ -195,7 +197,7 @@
           <li><div><b>Collect</b><span>Twice a day, a GitHub Actions job reads the public job-board APIs that companies use for their own careers pages (Greenhouse, Lever, Ashby, SmartRecruiters), plus remote-job sites (Himalayas, Remotive, Remote OK, Jobicy) and Adzuna India.</span></div></li>
           <li><div><b>Clean</b><span>Jobs are filtered to India and India-friendly remote roles, de-duplicated across sources, and closed when they disappear from the company's board.</span></div></li>
           <li><div><b>Understand</b><span>A free LLM (Groq, with Gemini as backup) reads each new posting and extracts a one-line summary, required and nice-to-have skills, years of experience, and whether freshers can apply. A rule-based parser covers anything the free quota can't.</span></div></li>
-          <li><div><b>Match & publish</b><span>This static site, RSS feeds and Telegram posts are generated from the results. Matching against your resume happens in your browser.</span></div></li>
+          <li><div><b>Match & publish</b><span>This website and its RSS feeds are rebuilt from the results. Matching against your resume happens in your browser.</span></div></li>
         </ol>
         <p class="via" style="margin-top:16px" id="credits">Every job links to its original posting. Jobs from aggregators are credited to them ("via Himalayas" and so on), as their API terms require.</p>
       </div>
