@@ -5,7 +5,15 @@ import json
 import re
 import xml.etree.ElementTree as ET
 
-from helpers import FIXTURES, FakeLLM, FakeTelegram, make_config, sample_profile, synthetic_payloads
+from helpers import (
+    FIXTURES,
+    FakeLLM,
+    FakeTelegram,
+    iso_ago,
+    make_config,
+    sample_profile,
+    synthetic_payloads,
+)
 
 from jobradar.offline import fixture_transport
 from jobradar.pipeline import Transports, run, summary_markdown
@@ -132,6 +140,30 @@ def test_closed_jobs_disappear(tmp_path):
     ]
     assert closed == [] and len(ids) == stats["open_jobs"]
     store.close()
+
+
+def test_rate_limited_source_waits_between_calls(tmp_path):
+    cfg = setup(tmp_path)
+    cfg.settings["sources"]["remotive"]["min_interval_hours"] = 6
+    first = go(cfg, notify=False)
+    assert "remotive" not in first["sources_skipped"]
+    open_before = first["open_jobs"]
+
+    # a backup schedule or a manual run soon after must not call Remotive again
+    retry = go(cfg, notify=False)
+    assert set(retry["sources_skipped"]) == {"remotive"}
+    assert "min 6h between calls" in retry["sources_skipped"]["remotive"]
+    assert all(t["target"] != "remotive" for t in retry["targets"])
+    assert retry["open_jobs"] == open_before  # skipping a source does not close its jobs
+
+    # once the interval has passed, it is called again
+    store = Store(cfg.db_path)
+    store.db.execute(
+        "UPDATE source_health SET last_attempt = ? WHERE source = 'remotive'", (iso_ago(hours=7),)
+    )
+    store.commit()
+    store.close()
+    assert "remotive" not in go(cfg, notify=False)["sources_skipped"]
 
 
 def test_runs_without_any_keys(tmp_path):
