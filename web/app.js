@@ -462,10 +462,10 @@ function renderSubscribe() {
   $("#feed-skill").onchange = pick;
   $("#feed-city").onchange = pick;
   const site = state.stats?.site || {};
+  // The Telegram block stays hidden until a public channel is set in config/settings.yaml.
   if (site.telegram_channel_url) {
+    $("#tg-section").hidden = false;
     $("#tg-link").replaceChildren(h("a", { class: "btn primary", href: safeUrl(site.telegram_channel_url), target: "_blank", rel: "noopener" }, "Join the Telegram channel"));
-  } else {
-    $("#tg-hint").textContent = "The Telegram channel isn't set up yet. Until then, any RSS feed above works with an RSS-to-Telegram bot.";
   }
 }
 
