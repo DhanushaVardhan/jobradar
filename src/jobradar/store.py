@@ -369,6 +369,13 @@ class Store:
             dict(r) for r in self.db.execute("SELECT * FROM source_health ORDER BY source, target")
         ]
 
+    def last_attempt(self, source: str) -> str | None:
+        """When any target of `source` was last called, successfully or not."""
+        row = self.db.execute(
+            "SELECT MAX(last_attempt) FROM source_health WHERE source = ?", (source,)
+        ).fetchone()
+        return row[0] if row else None
+
     # ------------------------------------------------------------------------------
     # LLM usage & cache
     # ------------------------------------------------------------------------------
