@@ -1,0 +1,61 @@
+{
+ "jobs": [
+  {
+   "id": 8653092002,
+   "title": "Associate Technical Support Engineer",
+   "absolute_url": "https://www.druva.com/why-druva/explore/careers/jobs/8653092002/?gh_jid=8653092002",
+   "location": {
+    "name": "Pune, Maharashtra, India"
+   },
+   "first_published": "2026-08-06T05:49:50-04:00",
+   "updated_at": "2026-09-01T13:15:13-04:00",
+   "offices": [
+    {
+     "name": "Pune, Maharashtra, India",
+     "location": "Pune, Maharashtra, India"
+    }
+   ],
+   "content": "&lt;p&gt;Experience: 3 to 6 years&lt;/p&gt;&lt;p&gt;Good understanding of backup and recovery concepts&lt;/p&gt;&lt;p&gt;Administrative experience in Operating Systems - Windows, Linux/Unix&lt;/p&gt;&lt;p&gt;Knowledge of cloud infrastructure - AWS&lt;/p&gt;&lt;p&gt;Working knowledge of Active Directory and API&lt;/p&gt;",
+   "company_name": "Druva",
+   "metadata": [
+    {
+     "id": 1,
+     "name": "Employment Type",
+     "value": "Full-time",
+     "value_type": "single_select"
+    }
+   ],
+   "departments": []
+  },
+  {
+   "id": 8298455002,
+   "title": "Data Operations Specialist",
+   "absolute_url": "https://www.druva.com/why-druva/explore/careers/jobs/8298455002/?gh_jid=8298455002",
+   "location": {
+    "name": "Pune, Maharashtra, India"
+   },
+   "first_published": "2025-12-08T04:59:46-05:00",
+   "updated_at": "2026-09-03T03:03:55-04:00",
+   "offices": [
+    {
+     "name": "Pune, Maharashtra, India",
+     "location": "Pune, Maharashtra, India"
+    }
+   ],
+   "content": "&lt;p&gt;Qualifications: 5+ years of experience in data operations, revenue operations or business intelligence&lt;/p&gt;&lt;p&gt;Strong SQL and data-analysis skills&lt;/p&gt;&lt;p&gt;Experience building dashboards using modern BI platforms such as Tableau&lt;/p&gt;",
+   "company_name": "Druva",
+   "metadata": [
+    {
+     "id": 1,
+     "name": "Employment Type",
+     "value": "Full-time",
+     "value_type": "single_select"
+    }
+   ],
+   "departments": []
+  }
+ ],
+ "meta": {
+  "total": 2
+ }
+}

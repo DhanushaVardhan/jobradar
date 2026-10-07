@@ -1,0 +1,37 @@
+# Your private job-seeker profile.
+#
+# DO NOT commit your real profile to a public repo.
+#  - Locally: copy this file to profile.yaml (it's git-ignored).
+#  - In GitHub Actions: paste the whole YAML into a repository secret named JOBRADAR_PROFILE.
+
+name: "Your Name"
+
+# Roles you want. Used for title matching and in the AI fit prompt.
+target_roles:
+  - Machine Learning Engineer
+  - Data Scientist
+  - Software Engineer
+  - Python Developer
+
+experience_years: 0          # 0 = fresher / final-year student
+
+# Preferred cities (any Indian city name or alias works: Bangalore, Gurgaon, Vizag...)
+locations: [Bengaluru, Hyderabad, Chennai, Pune]
+open_to_remote: true
+
+# Optional: skills you want to be matched on. Leave empty to extract them from your resume.
+skills: []
+
+# Titles containing any of these words are never shown to you.
+exclude_keywords: [sales, account executive, recruiter, legal counsel]
+
+# Plain-text resume. The LLM uses it to score how well you fit each job
+# and to suggest what to highlight when you apply.
+resume: |
+  YOUR NAME — B.Tech Computer Science (2026)
+  Skills: Python, PyTorch, scikit-learn, SQL, Pandas, NumPy, Git, Linux, Docker, FastAPI
+  Projects:
+  - Image classifier (PyTorch, transfer learning), deployed as a FastAPI service in Docker.
+  - Text classification pipeline (TF-IDF + logistic regression), 95% F1.
+  - JobRadar: open-source job aggregator with LLM enrichment and GitHub Actions automation.
+  Education: B.Tech CSE

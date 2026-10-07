@@ -1,0 +1,142 @@
+{
+ "jobs": [
+  {
+   "id": 4880153101,
+   "title": "Associate - Content (Digest)",
+   "absolute_url": "https://job-boards.eu.greenhouse.io/groww/jobs/4880153101",
+   "location": {
+    "name": "Bengaluru-VTP, India"
+   },
+   "first_published": "2026-06-03T02:46:08-04:00",
+   "updated_at": "2026-08-27T07:35:34-04:00",
+   "offices": [
+    {
+     "name": "Bengaluru-VTP",
+     "location": "Bengaluru-VTP, India"
+    }
+   ],
+   "content": "&lt;p&gt;Well-Read: Strong interest in reading books, articles and newsletters&lt;/p&gt;&lt;p&gt;Strong Communicator: Ability to explain complex topics simply&lt;/p&gt;&lt;p&gt;Curious Mindset: Eagerness to explore different topics and learn new tools&lt;/p&gt;",
+   "company_name": "Groww",
+   "metadata": [
+    {
+     "id": 1,
+     "name": "Employment Type",
+     "value": "Full-time",
+     "value_type": "single_select"
+    }
+   ],
+   "departments": []
+  },
+  {
+   "id": 4588364101,
+   "title": "Equity Research Analyst (AMC)",
+   "absolute_url": "https://job-boards.eu.greenhouse.io/groww/jobs/4588364101",
+   "location": {
+    "name": "Mumbai-Lower Parel, India"
+   },
+   "first_published": "2025-07-18T06:34:10-04:00",
+   "updated_at": "2026-08-25T07:25:07-04:00",
+   "offices": [
+    {
+     "name": "Mumbai-Lower Parel",
+     "location": "Mumbai-Lower Parel, India"
+    }
+   ],
+   "content": "&lt;p&gt;Master&amp;#x27;s degree in finance, economics or CA&lt;/p&gt;&lt;p&gt;2-5 years of relevant experience&lt;/p&gt;&lt;p&gt;Deep understanding of fundamental analysis, financial modeling, and valuation&lt;/p&gt;&lt;p&gt;CA/FRM/CFA/MBA is a plus&lt;/p&gt;",
+   "company_name": "Groww",
+   "metadata": [
+    {
+     "id": 1,
+     "name": "Employment Type",
+     "value": "Full-time",
+     "value_type": "single_select"
+    }
+   ],
+   "departments": []
+  },
+  {
+   "id": 4728765101,
+   "title": "Manager - Controllership (NBFC)",
+   "absolute_url": "https://job-boards.eu.greenhouse.io/groww/jobs/4728765101",
+   "location": {
+    "name": "Bengaluru-VTP, India"
+   },
+   "first_published": "2025-12-12T02:24:23-05:00",
+   "updated_at": "2026-08-25T07:25:07-04:00",
+   "offices": [
+    {
+     "name": "Bengaluru-VTP",
+     "location": "Bengaluru-VTP, India"
+    }
+   ],
+   "content": "&lt;p&gt;CA qualification is mandatory&lt;/p&gt;&lt;p&gt;Minimum 3 years of experience in an NBFC&lt;/p&gt;&lt;p&gt;Strong knowledge of RBI regulations applicable to NBFCs&lt;/p&gt;",
+   "company_name": "Groww",
+   "metadata": [
+    {
+     "id": 1,
+     "name": "Employment Type",
+     "value": "Full-time",
+     "value_type": "single_select"
+    }
+   ],
+   "departments": []
+  },
+  {
+   "id": 4956817101,
+   "title": "Video Editor Intern",
+   "absolute_url": "https://job-boards.eu.greenhouse.io/groww/jobs/4956817101",
+   "location": {
+    "name": "Bengaluru-VTP, India"
+   },
+   "first_published": "2026-09-04T06:29:58-04:00",
+   "updated_at": "2026-09-04T06:32:49-04:00",
+   "offices": [
+    {
+     "name": "Bengaluru-VTP",
+     "location": "Bengaluru-VTP, India"
+    }
+   ],
+   "content": "&lt;p&gt;Good command of video editing software such as Adobe Premiere Pro or Final Cut Pro&lt;/p&gt;&lt;p&gt;Basic understanding of video production equipment, lighting, and filming techniques&lt;/p&gt;",
+   "company_name": "Groww",
+   "metadata": [
+    {
+     "id": 1,
+     "name": "Employment Type",
+     "value": "Full-time",
+     "value_type": "single_select"
+    }
+   ],
+   "departments": []
+  },
+  {
+   "id": 4967486101,
+   "title": "YouTube & Content - Internship",
+   "absolute_url": "https://job-boards.eu.greenhouse.io/groww/jobs/4967486101",
+   "location": {
+    "name": "Bengaluru-VTP, India"
+   },
+   "first_published": "2026-09-04T07:12:34-04:00",
+   "updated_at": "2026-09-04T07:13:03-04:00",
+   "offices": [
+    {
+     "name": "Bengaluru-VTP",
+     "location": "Bengaluru-VTP, India"
+    }
+   ],
+   "content": "&lt;p&gt;Strong interest in YouTube, content, and digital media&lt;/p&gt;&lt;p&gt;Good understanding of YouTube SEO and content performance&lt;/p&gt;&lt;p&gt;Strong communication and coordination skills&lt;/p&gt;",
+   "company_name": "Groww",
+   "metadata": [
+    {
+     "id": 1,
+     "name": "Employment Type",
+     "value": "Full-time",
+     "value_type": "single_select"
+    }
+   ],
+   "departments": []
+  }
+ ],
+ "meta": {
+  "total": 5
+ }
+}

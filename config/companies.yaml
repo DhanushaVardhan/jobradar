@@ -1,0 +1,41 @@
+# Company career boards tracked by JobRadar.
+#
+# Every board below is read through the company's own PUBLIC job-board API
+# (the same feed their careers page uses), so data is fresh and official.
+#
+# Add a company:  python -m jobradar discover <slug>
+#   e.g. `python -m jobradar discover razorpay` tries Greenhouse, Lever, Ashby
+#   and SmartRecruiters and prints the YAML line to paste here.
+#
+# Boards that start failing (404 etc.) are reported in the run summary and on
+# the site's status panel; they never break the pipeline.
+
+greenhouse:
+  - { slug: databricks, name: Databricks }
+  - { slug: stripe, name: Stripe }
+  - { slug: mongodb, name: MongoDB }
+  - { slug: twilio, name: Twilio }
+  - { slug: okta, name: Okta }
+  - { slug: rubrik, name: Rubrik }
+  - { slug: samsara, name: Samsara }
+  - { slug: coinbase, name: Coinbase }
+  - { slug: cloudflare, name: Cloudflare }
+  - { slug: hackerrank, name: HackerRank }
+  - { slug: groww, name: Groww }
+  - { slug: gitlab, name: GitLab }
+  - { slug: druva, name: Druva }
+  - { slug: airbnb, name: Airbnb }
+
+lever:
+  - { slug: cred, name: CRED }
+  - { slug: meesho, name: Meesho }
+  - { slug: zeta, name: Zeta }
+  - { slug: hevodata, name: Hevo Data }
+
+ashby:
+  - { slug: atlan, name: Atlan }
+
+smartrecruiters: []
+  # Examples (verify with `jobradar discover` first):
+  # - { slug: Visa, name: Visa }
+  # - { slug: BoschGroup, name: Bosch }

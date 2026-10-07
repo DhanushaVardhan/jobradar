@@ -1,0 +1,118 @@
+name: JobRadar pipeline
+
+# Runs the whole product: fetch jobs -> AI enrichment -> matching -> Telegram -> website.
+# Free on public repositories (GitHub Actions minutes are unlimited for public repos).
+on:
+  schedule:
+    - cron: "30 2 * * *"    # 08:00 IST: morning run (sends your personal digest)
+    - cron: "30 12 * * *"   # 18:00 IST: evening run
+  workflow_dispatch:
+    inputs:
+      digest:
+        description: "Personal Telegram digest"
+        type: choice
+        options: [auto, force, skip]
+        default: auto
+      llm:
+        description: "Use LLM enrichment"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write     # push the database snapshot to the `data` branch
+  pages: write        # deploy the website
+  id-token: write     # required by deploy-pages
+  actions: write      # keep the schedule alive (see last step)
+
+concurrency:
+  group: jobradar-pipeline
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - id: pages
+        uses: actions/configure-pages@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: pip install -e .
+
+      - name: Restore database from the data branch
+        run: |
+          mkdir -p data
+          if git ls-remote --exit-code --heads origin data > /dev/null; then
+            git fetch --depth=1 origin data
+            git show origin/data:jobradar.db.gz | gunzip > data/jobradar.db
+            echo "Restored $(du -h data/jobradar.db | cut -f1) database"
+          else
+            echo "No data branch yet: first run starts with an empty database"
+          fi
+
+      - name: Run pipeline
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+          JOBRADAR_PROFILE: ${{ secrets.JOBRADAR_PROFILE }}
+          SITE_URL: ${{ steps.pages.outputs.base_url }}/
+          REPO_URL: ${{ github.server_url }}/${{ github.repository }}
+          DIGEST: ${{ inputs.digest || 'auto' }}
+          USE_LLM: ${{ github.event_name == 'workflow_dispatch' && !inputs.llm && 'false' || 'true' }}
+        run: |
+          args=(--summary "$GITHUB_STEP_SUMMARY" --json run-stats.json)
+          [ "$DIGEST" = "force" ] && args+=(--digest)
+          [ "$DIGEST" = "skip" ] && args+=(--no-digest)
+          [ "$USE_LLM" = "false" ] && args+=(--no-llm)
+          python -m jobradar run "${args[@]}"
+
+      - name: Save database to the data branch
+        if: always() && hashFiles('data/jobradar.db') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python -c "import sqlite3; c = sqlite3.connect('data/jobradar.db'); c.execute('VACUUM'); c.close()"
+          snap="$(mktemp -d)"
+          gzip -9 -c data/jobradar.db > "$snap/jobradar.db.gz"
+          cat > "$snap/README.md" <<'EOF'
+          # JobRadar data snapshot
+          SQLite database written by the pipeline workflow. This branch is force-pushed
+          with a single commit on every run, so the repository never grows.
+          EOF
+          cd "$snap"
+          git init -q -b data
+          git add .
+          git -c user.name="jobradar-bot" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -qm "data: snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -qf "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" data
+          echo "Saved $(du -h jobradar.db.gz | cut -f1) snapshot"
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: site_dist
+
+      - id: deployment
+        uses: actions/deploy-pages@v5
+
+      # GitHub pauses scheduled workflows in repos with no activity for 60 days.
+      # Re-enabling the workflow through the API resets that timer without dummy commits.
+      - name: Keep the schedule alive
+        if: github.event_name == 'schedule'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow enable pipeline.yml --repo "$GITHUB_REPOSITORY" || true

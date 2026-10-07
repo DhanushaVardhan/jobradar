@@ -1,0 +1,162 @@
+[
+ {
+  "id": "cfdb183c-e9f4-4877-8b8c-bd7a3b4a7fde",
+  "text": "Account Executive",
+  "hostedUrl": "https://jobs.lever.co/hevodata/cfdb183c-e9f4-4877-8b8c-bd7a3b4a7fde",
+  "createdAt": 1781107135316,
+  "country": "IN",
+  "workplaceType": "onsite",
+  "categories": {
+   "commitment": "Full time",
+   "department": "Sales",
+   "location": "Bangalore, India",
+   "team": "Account Executive - Mid Market",
+   "allLocations": [
+    "Bangalore, India"
+   ]
+  },
+  "descriptionPlain": "Hevo is a no-code Data Pipeline platform trusted by 1,000+ companies globally. Own US mid-market territory with high inbound intent and structured BDR support.",
+  "description": "<div>Hevo is a no-code Data Pipeline platform trusted by 1,000+ companies globally. Own US mid-market territory with high inbound intent and structured BDR support.</div>",
+  "lists": [
+   {
+    "text": "What We Are Looking For",
+    "content": "<li>Must-Haves: 4-7 years B2B sales with quota-carrying experience</li><li>Comfortable with US-aligned hours (6 PM-3 AM IST)</li><li>Nice-to-Haves: technical product sales experience</li><li>HubSpot and LinkedIn Sales Navigator proficiency</li>"
+   }
+  ],
+  "additionalPlain": "Equal opportunity employer."
+ },
+ {
+  "id": "a7f26742-f965-4a59-840d-f7afa0a28176",
+  "text": "AI Solution Engineer",
+  "hostedUrl": "https://jobs.lever.co/hevodata/a7f26742-f965-4a59-840d-f7afa0a28176",
+  "createdAt": 1757064386743,
+  "country": "IN",
+  "workplaceType": "onsite",
+  "categories": {
+   "commitment": "Full time",
+   "department": "Strategy",
+   "location": "Bangalore, India",
+   "team": "Strategy All",
+   "allLocations": [
+    "Bangalore, India"
+   ]
+  },
+  "descriptionPlain": "The AI Solutions Engineer will prototype, test, and deliver internal AI applications improving GTM team efficiency. Role combines AI/ML knowledge, software engineering, and GTM workflow understanding.",
+  "description": "<div>The AI Solutions Engineer will prototype, test, and deliver internal AI applications improving GTM team efficiency. Role combines AI/ML knowledge, software engineering, and GTM workflow understanding.</div>",
+  "lists": [
+   {
+    "text": "Key Responsibilities",
+    "content": "<li>Build LLM-based applications using OpenAI and Anthropic APIs</li><li>Integrate into HubSpot, Salesforce and Google Sheets</li><li>Test AI models and APIs, validate feasibility, create MVPs</li>"
+   },
+   {
+    "text": "What We're Looking For",
+    "content": "<li>AI/ML fundamentals (NLP, LLMs, embeddings, prompt engineering)</li><li>Python proficiency</li><li>REST/GraphQL APIs</li><li>Prototyping frameworks (Flask, FastAPI, Streamlit)</li><li>5 years end-to-end application building</li>"
+   }
+  ],
+  "additionalPlain": "Equal opportunity employer."
+ },
+ {
+  "id": "d8ea771e-fe9b-4c14-b184-4bed18296928",
+  "text": "Analytics Manager",
+  "hostedUrl": "https://jobs.lever.co/hevodata/d8ea771e-fe9b-4c14-b184-4bed18296928",
+  "createdAt": 1768475159434,
+  "country": "IN",
+  "workplaceType": "onsite",
+  "categories": {
+   "commitment": "Full time",
+   "department": "BizOps",
+   "location": "Bangalore, India",
+   "team": "BizOps",
+   "allLocations": [
+    "Bangalore, India"
+   ]
+  },
+  "descriptionPlain": "Analytics Manager will define KPIs across the organization, provide data-driven insights to drive business growth, and build an analytics team.",
+  "description": "<div>Analytics Manager will define KPIs across the organization, provide data-driven insights to drive business growth, and build an analytics team.</div>",
+  "lists": [
+   {
+    "text": "What you'll bring to the table",
+    "content": "<li>2+ years managing high-performance analytics teams</li><li>Modern data stack understanding (Tableau, Looker)</li><li>7-10 years experience with demonstrated business impact</li>"
+   }
+  ],
+  "additionalPlain": "Equal opportunity employer."
+ },
+ {
+  "id": "f74eb975-45dd-47a8-a27a-5880d1d776c7",
+  "text": "Associate Account Executive (SMB - US)",
+  "hostedUrl": "https://jobs.lever.co/hevodata/f74eb975-45dd-47a8-a27a-5880d1d776c7",
+  "createdAt": 1783421755643,
+  "country": "IN",
+  "workplaceType": "onsite",
+  "categories": {
+   "commitment": "Full time",
+   "department": "Sales",
+   "location": "Bengaluru, India",
+   "team": "Sales Management",
+   "allLocations": [
+    "Bengaluru, India"
+   ]
+  },
+  "descriptionPlain": "Own US SMB territory at Hevo. Run complete sales cycles with annual quota $200K-$300K ARR.",
+  "description": "<div>Own US SMB territory at Hevo. Run complete sales cycles with annual quota $200K-$300K ARR.</div>",
+  "lists": [
+   {
+    "text": "What We're Looking For",
+    "content": "<li>Must Have: 2-5 years quota-carrying B2B sales</li><li>Consistent target achievement</li><li>US-aligned hours (6 PM-3 AM IST)</li>"
+   }
+  ],
+  "additionalPlain": "Equal opportunity employer."
+ },
+ {
+  "id": "a49edaa6-dd55-4e15-930e-ed0228169da2",
+  "text": "Associate Director - Technical Account Management",
+  "hostedUrl": "https://jobs.lever.co/hevodata/a49edaa6-dd55-4e15-930e-ed0228169da2",
+  "createdAt": 1789068714035,
+  "country": "IN",
+  "workplaceType": "onsite",
+  "categories": {
+   "commitment": "Full time",
+   "department": "Customer Success",
+   "location": "Pune, Maharashtra",
+   "team": "TAM",
+   "allLocations": [
+    "Pune, Maharashtra"
+   ]
+  },
+  "descriptionPlain": "Build and run Hevo's Technical Account Management function. Own the full post-sales journey.",
+  "description": "<div>Build and run Hevo's Technical Account Management function. Own the full post-sales journey.</div>",
+  "lists": [
+   {
+    "text": "Must-Have",
+    "content": "<li>10+ years overall, 5+ leading Technical CS/TAM teams in B2B SaaS</li><li>Technical product experience (data infrastructure, analytics, ETL/ELT, data warehousing, observability, DevOps)</li>"
+   }
+  ],
+  "additionalPlain": "Equal opportunity employer."
+ },
+ {
+  "id": "cf7e9545-dc6a-4116-af4c-70ad3da9a37c",
+  "text": "Associate Director - Technical Account Management",
+  "hostedUrl": "https://jobs.lever.co/hevodata/cf7e9545-dc6a-4116-af4c-70ad3da9a37c",
+  "createdAt": 1788264352236,
+  "country": "IN",
+  "workplaceType": "onsite",
+  "categories": {
+   "commitment": "Full time",
+   "department": "Customer Success",
+   "location": "Bangalore, India",
+   "team": "TAM",
+   "allLocations": [
+    "Bangalore, India"
+   ]
+  },
+  "descriptionPlain": "Build and run Hevo's Technical Account Management function. Own the full post-sales journey.",
+  "description": "<div>Build and run Hevo's Technical Account Management function. Own the full post-sales journey.</div>",
+  "lists": [
+   {
+    "text": "Must-Have",
+    "content": "<li>10+ years overall, 5+ leading Technical CS/TAM teams in B2B SaaS</li><li>Technical product experience (data infrastructure, analytics, ETL/ELT, data warehousing, observability, DevOps)</li>"
+   }
+  ],
+  "additionalPlain": "Equal opportunity employer."
+ }
+]

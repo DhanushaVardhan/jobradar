@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install
+        run: pip install -e ".[dev]"
+      - name: Lint
+        run: |
+          ruff check src tests
+          ruff format --check src tests
+      - name: Unit, integration and browser-parity tests
+        run: pytest -q
+      - name: Offline end-to-end smoke run (recorded API responses, no keys)
+        env:
+          JOBRADAR_DB: /tmp/jobradar-smoke.db
+          JOBRADAR_SITE_DIR: /tmp/jobradar-site
+        run: |
+          python -m jobradar run --offline tests/fixtures --no-notify --no-llm
+          test -s /tmp/jobradar-site/data/jobs.json

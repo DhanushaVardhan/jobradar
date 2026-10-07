@@ -1,0 +1,61 @@
+[
+ {
+  "id": "7d9af9b5-c1c7-48ec-bbb5-9b25e49f6596",
+  "text": "AM/ Manager - Risk & Decision Science",
+  "hostedUrl": "https://jobs.lever.co/meesho/7d9af9b5-c1c7-48ec-bbb5-9b25e49f6596",
+  "createdAt": 1757916149833,
+  "country": "IN",
+  "workplaceType": "onsite",
+  "categories": {
+   "commitment": "Full Time Employee",
+   "department": "Financial Services",
+   "location": "Bangalore, Karnataka",
+   "team": "Financial Services",
+   "allLocations": [
+    "Bangalore, Karnataka"
+   ]
+  },
+  "descriptionPlain": "About the Team. Welcome to Meesho, where every story begins with a spark of inspiration. Lending is going to be our primary focus in this phase of our FS journey, and risk management is at the core of building any sustainable credit business at scale.",
+  "description": "<div>About the Team. Welcome to Meesho, where every story begins with a spark of inspiration. Lending is going to be our primary focus in this phase of our FS journey, and risk management is at the core of building any sustainable credit business at scale.</div>",
+  "lists": [
+   {
+    "text": "What you will do",
+    "content": "<li>Own end to end ML model development methodology: feature creation, model design and development, tuning, validating, monitoring and calibrating</li><li>Coding up and maintaining BRE, automating credit policies</li><li>Independently drive projects on Risk and Data science</li>"
+   },
+   {
+    "text": "What you will need",
+    "content": "<li>3-6 years of relevant Fin-Tech experience, preferably in Digital Unsecured Lending</li><li>Working knowledge of GCP, Vertex AI and cloud function for deployment</li><li>Solid understanding of credit bureau data (CIBIL, Equifax, CRIF)</li><li>Expert in PD, EAD, LGD modeling in Python environment</li>"
+   }
+  ],
+  "additionalPlain": "Equal opportunity employer."
+ },
+ {
+  "id": "22c4a7a0-43be-439e-9473-2f8074b3e8d5",
+  "text": "Assistant Manager - Business Finance",
+  "hostedUrl": "https://jobs.lever.co/meesho/22c4a7a0-43be-439e-9473-2f8074b3e8d5",
+  "createdAt": 1779371880579,
+  "country": "IN",
+  "workplaceType": "onsite",
+  "categories": {
+   "department": "Finance, Legal & PR",
+   "location": "Bangalore, Karnataka",
+   "team": "Business Finance",
+   "allLocations": [
+    "Bangalore, Karnataka"
+   ]
+  },
+  "descriptionPlain": "The BizFin team at Meesho is a close-knit and high-performing team. As AM - Finance, you will be responsible for developing and maintaining robust financial plans and ensuring effective execution.",
+  "description": "<div>The BizFin team at Meesho is a close-knit and high-performing team. As AM - Finance, you will be responsible for developing and maintaining robust financial plans and ensuring effective execution.</div>",
+  "lists": [
+   {
+    "text": "What you will do",
+    "content": "<li>Jointly own the OKRs of the respective business units and build an AOP to achieve them</li><li>Complete account-level month-end closing reviews</li><li>Drive standardisation automation projects for process efficiency</li>"
+   },
+   {
+    "text": "What you will need",
+    "content": "<li>Ability to deal with ambiguity</li><li>Strong analytical rigour and problem-solving skills</li><li>Qualified CA Fresher from 2025/2026 batch</li>"
+   }
+  ],
+  "additionalPlain": "Equal opportunity employer."
+ }
+]

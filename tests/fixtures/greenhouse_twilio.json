@@ -1,0 +1,34 @@
+{
+ "jobs": [
+  {
+   "id": 7781659,
+   "title": "Applications Engineer 2",
+   "absolute_url": "https://job-boards.greenhouse.io/twilio/jobs/7781659",
+   "location": {
+    "name": "Remote - India"
+   },
+   "first_published": "2026-06-30T01:16:56-04:00",
+   "updated_at": "2026-08-21T10:33:20-04:00",
+   "offices": [
+    {
+     "name": "Remote - India",
+     "location": null
+    }
+   ],
+   "content": "&lt;p&gt;Qualifications: 3+ years experience with Apex, LWC, SOQL, Javascript with Agile development practices&lt;/p&gt;&lt;p&gt;API integrations (ETL, marketing tools, analytics)&lt;/p&gt;&lt;p&gt;Deployment and CI/CD support&lt;/p&gt;&lt;p&gt;Comprehensive experience debugging and troubleshooting in Salesforce&lt;/p&gt;",
+   "company_name": "Twilio",
+   "metadata": [
+    {
+     "id": 1,
+     "name": "Employment Type",
+     "value": "Full-time",
+     "value_type": "single_select"
+    }
+   ],
+   "departments": []
+  }
+ ],
+ "meta": {
+  "total": 1
+ }
+}

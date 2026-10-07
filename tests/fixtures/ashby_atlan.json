@@ -1,0 +1,62 @@
+{
+ "apiVersion": "1",
+ "jobs": [
+  {
+   "id": "254c1250-953b-4323-8d18-9fe5e41d8d7d",
+   "title": "Senior Security Engineer - Corporate Security",
+   "department": "IT & Security",
+   "team": "Security",
+   "employmentType": "FullTime",
+   "location": "India",
+   "secondaryLocations": [],
+   "publishedAt": "2026-07-24T11:33:47.990+00:00",
+   "isListed": true,
+   "isRemote": true,
+   "workplaceType": "Remote",
+   "address": {
+    "postalAddress": {
+     "addressCountry": "India"
+    }
+   },
+   "jobUrl": "https://jobs.ashbyhq.com/atlan/254c1250-953b-4323-8d18-9fe5e41d8d7d",
+   "applyUrl": "https://jobs.ashbyhq.com/atlan/254c1250-953b-4323-8d18-9fe5e41d8d7d/application",
+   "descriptionHtml": "<p>We are looking for a Senior Security Engineer to own and drive Corporate Security at Atlan.</p>",
+   "descriptionPlain": "Atlan is building the context layer for enterprise AI. We are looking for a Senior Security Engineer to own and drive Corporate Security at Atlan. 5+ years in security engineering; identity and access management, SSO, cloud security on AWS.",
+   "compensation": {
+    "compensationTierSummary": null,
+    "scrapeableCompensationSalarySummary": null,
+    "compensationTiers": [],
+    "summaryComponents": []
+   }
+  },
+  {
+   "id": "945193fe-b746-49e1-8843-2d1358314ec5",
+   "title": "Enterprise Account Executive - West",
+   "department": "Sales",
+   "team": "Account Executives",
+   "employmentType": "FullTime",
+   "location": "California",
+   "secondaryLocations": [],
+   "publishedAt": "2026-09-07T13:25:11.838+00:00",
+   "isListed": true,
+   "isRemote": true,
+   "workplaceType": "Remote",
+   "address": {
+    "postalAddress": {
+     "addressRegion": "California",
+     "addressCountry": "United States"
+    }
+   },
+   "jobUrl": "https://jobs.ashbyhq.com/atlan/945193fe-b746-49e1-8843-2d1358314ec5",
+   "descriptionPlain": "Run full-cycle enterprise sales cycles.",
+   "compensation": {}
+  },
+  {
+   "id": "hidden-1",
+   "title": "Unlisted role",
+   "isListed": false,
+   "location": "India",
+   "jobUrl": "https://jobs.ashbyhq.com/atlan/hidden-1"
+  }
+ ]
+}

@@ -1,0 +1,68 @@
+{
+ "jobs": [
+  {
+   "id": 7318558,
+   "title": "Account Development Representative",
+   "absolute_url": "https://www.mongodb.com/careers/job/?gh_jid=7318558",
+   "location": {
+    "name": "Gurugram"
+   },
+   "first_published": "2026-07-27T07:46:53-04:00",
+   "updated_at": "2026-09-01T03:40:27-04:00",
+   "offices": [
+    {
+     "id": 65909,
+     "name": "Gurugram",
+     "location": "Gurugram, Haryana, India"
+    }
+   ],
+   "departments": [
+    {
+     "id": 38867,
+     "name": "Sales Development"
+    }
+   ],
+   "content": "&lt;p&gt;An Account Development Representative at MongoDB is the starting point for building a serious career in technology sales&lt;/p&gt;&lt;p&gt;You will partner closely with Account Executives to identify new opportunities within strategic accounts&lt;/p&gt;&lt;p&gt;From day one, you will learn and apply structured sales frameworks including MEDDIC qualification, account mapping and value-based discovery&lt;/p&gt;&lt;p&gt;You will develop technical fluency across modern application architectures, cloud infrastructure, and database technologies&lt;/p&gt;",
+   "company_name": "MongoDB",
+   "metadata": [
+    {
+     "id": 1,
+     "name": "Employment Type",
+     "value": "Full-time",
+     "value_type": "single_select"
+    }
+   ]
+  },
+  {
+   "id": 9000001,
+   "title": "Senior Software Engineer, Atlas",
+   "absolute_url": "https://www.mongodb.com/careers/job/?gh_jid=9000001",
+   "location": {
+    "name": "New York City"
+   },
+   "first_published": "2026-09-01T07:46:53-04:00",
+   "updated_at": "2026-09-10T03:40:27-04:00",
+   "offices": [
+    {
+     "id": 1,
+     "name": "New York",
+     "location": "New York, NY, United States"
+    }
+   ],
+   "content": "&lt;p&gt;Build distributed systems in Go and Java&lt;/p&gt;&lt;p&gt;5+ years experience&lt;/p&gt;",
+   "company_name": "MongoDB",
+   "metadata": [
+    {
+     "id": 1,
+     "name": "Employment Type",
+     "value": "Full-time",
+     "value_type": "single_select"
+    }
+   ],
+   "departments": []
+  }
+ ],
+ "meta": {
+  "total": 2
+ }
+}

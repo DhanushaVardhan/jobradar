@@ -1,0 +1,142 @@
+{
+ "jobs": [
+  {
+   "id": 7959585,
+   "title": "Applied AI Engineer",
+   "absolute_url": "https://job-boards.greenhouse.io/hackerrank/jobs/7959585",
+   "location": {
+    "name": "Hybrid in Bangalore, India"
+   },
+   "first_published": "2026-05-27T02:29:41-04:00",
+   "updated_at": "2026-06-10T04:20:43-04:00",
+   "offices": [
+    {
+     "name": "Hybrid in Bengaluru, India",
+     "location": null
+    }
+   ],
+   "content": "&lt;p&gt;Requirements: 1-4 years of software engineering with production systems&lt;/p&gt;&lt;p&gt;Strong Python skills and full-stack fundamentals&lt;/p&gt;&lt;p&gt;Hands-on LLM experience in production&lt;/p&gt;&lt;p&gt;Built evaluation pipelines for AI systems&lt;/p&gt;&lt;p&gt;Fluency with AI tools and agents&lt;/p&gt;",
+   "company_name": "HackerRank",
+   "metadata": [
+    {
+     "id": 1,
+     "name": "Employment Type",
+     "value": "Full-time",
+     "value_type": "single_select"
+    }
+   ],
+   "departments": []
+  },
+  {
+   "id": 8127535,
+   "title": "Customer Experience Engineer, L1",
+   "absolute_url": "https://job-boards.greenhouse.io/hackerrank/jobs/8127535",
+   "location": {
+    "name": "Hybrid in Bangalore, India"
+   },
+   "first_published": "2026-08-27T10:16:44-04:00",
+   "updated_at": "2026-08-27T10:16:44-04:00",
+   "offices": [
+    {
+     "name": "Hybrid in Bengaluru, India",
+     "location": null
+    }
+   ],
+   "content": "&lt;p&gt;Requirements: Up to 3 years relevant experience&lt;/p&gt;&lt;p&gt;Strong programming fundamentals with Python, JavaScript, or Java&lt;/p&gt;&lt;p&gt;Familiarity with REST APIs, HTTP, web applications&lt;/p&gt;&lt;p&gt;Working SQL knowledge&lt;/p&gt;&lt;p&gt;Comfortable with rotational shifts and on-call coverage&lt;/p&gt;",
+   "company_name": "HackerRank",
+   "metadata": [
+    {
+     "id": 1,
+     "name": "Employment Type",
+     "value": "Full-time",
+     "value_type": "single_select"
+    }
+   ],
+   "departments": []
+  },
+  {
+   "id": 6993983,
+   "title": "Customer Experience Engineer, L2",
+   "absolute_url": "https://job-boards.greenhouse.io/hackerrank/jobs/6993983",
+   "location": {
+    "name": "Hybrid in Bangalore, India"
+   },
+   "first_published": "2025-07-09T00:46:52-04:00",
+   "updated_at": "2026-08-14T01:27:54-04:00",
+   "offices": [
+    {
+     "name": "Hybrid in Bengaluru, India",
+     "location": null
+    }
+   ],
+   "content": "&lt;p&gt;Requirements: 3-7 years in technical support, solutions engineering, or similar roles&lt;/p&gt;&lt;p&gt;Strong debugging across APIs, distributed integrations, logs&lt;/p&gt;&lt;p&gt;Solid SQL and Python coding ability&lt;/p&gt;&lt;p&gt;Working knowledge of SSO, SAML, OAuth&lt;/p&gt;",
+   "company_name": "HackerRank",
+   "metadata": [
+    {
+     "id": 1,
+     "name": "Employment Type",
+     "value": "Full-time",
+     "value_type": "single_select"
+    }
+   ],
+   "departments": []
+  },
+  {
+   "id": 8102780,
+   "title": "Data Engineer II",
+   "absolute_url": "https://job-boards.greenhouse.io/hackerrank/jobs/8102780",
+   "location": {
+    "name": "Hybrid in Bangalore, India"
+   },
+   "first_published": "2026-08-11T08:30:40-04:00",
+   "updated_at": "2026-08-11T08:30:40-04:00",
+   "offices": [
+    {
+     "name": "Hybrid in Bengaluru, India",
+     "location": null
+    }
+   ],
+   "content": "&lt;p&gt;Requirements: 2-4 years data engineering experience&lt;/p&gt;&lt;p&gt;Working knowledge of OLAP databases like StarRocks&lt;/p&gt;&lt;p&gt;Some data lake technology experience&lt;/p&gt;&lt;p&gt;Familiarity with distributed query engines and Spark&lt;/p&gt;&lt;p&gt;Comfortable in AWS and open-source environments&lt;/p&gt;",
+   "company_name": "HackerRank",
+   "metadata": [
+    {
+     "id": 1,
+     "name": "Employment Type",
+     "value": "Full-time",
+     "value_type": "single_select"
+    }
+   ],
+   "departments": []
+  },
+  {
+   "id": 7824249,
+   "title": "DevOps Engineer II",
+   "absolute_url": "https://job-boards.greenhouse.io/hackerrank/jobs/7824249",
+   "location": {
+    "name": "Hybrid in Bangalore, India"
+   },
+   "first_published": "2026-04-18T02:40:11-04:00",
+   "updated_at": "2026-08-27T10:51:46-04:00",
+   "offices": [
+    {
+     "name": "Hybrid in Bengaluru, India",
+     "location": null
+    }
+   ],
+   "content": "&lt;p&gt;Requirements: 3+ years DevOps, SRE, or Cloud Infrastructure Engineering&lt;/p&gt;&lt;p&gt;Deep AWS expertise including EKS, EC2, S3, SQS, IAM&lt;/p&gt;&lt;p&gt;Strong Terraform, Docker, Kubernetes, Linux experience&lt;/p&gt;&lt;p&gt;Python or Java scripting skills&lt;/p&gt;&lt;p&gt;Solid grasp of cloud cost optimization&lt;/p&gt;",
+   "company_name": "HackerRank",
+   "metadata": [
+    {
+     "id": 1,
+     "name": "Employment Type",
+     "value": "Full-time",
+     "value_type": "single_select"
+    }
+   ],
+   "departments": []
+  }
+ ],
+ "meta": {
+  "total": 5
+ }
+}
