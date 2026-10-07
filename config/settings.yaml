@@ -33,7 +33,8 @@ sources:
   ashby: { enabled: true }
   smartrecruiters: { enabled: true, country: in, max_details: 40 }
   himalayas: { enabled: true, country: IN, max_pages: 8, max_age_days: 4 }
-  remotive: { enabled: true }
+  # Remotive advises at most 4 calls a day: 6 hours apart keeps that even with retries
+  remotive: { enabled: true, min_interval_hours: 6 }
   remoteok: { enabled: true }
   jobicy: { enabled: true, count: 100 }
   # Adzuna needs a free key (ADZUNA_APP_ID / ADZUNA_APP_KEY). It is skipped when the key is missing.
@@ -100,7 +101,7 @@ match:
 notify:
   telegram:
     owner_digest: true
-    # The digest is only sent by runs starting at these UTC hours (02:30 UTC = 08:00 IST)
+    # The digest is only sent by runs starting at these UTC hours (morning runs start 02:17-03:17 UTC, about 08:00 IST)
     digest_hours_utc: [2, 3]
     channel_posts_per_run: 8
     health_alert_after_failures: 3
