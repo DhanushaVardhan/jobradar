@@ -1,8 +1,16 @@
 version: 2
 updates:
+  # One grouped pull request per month for GitHub Actions versions
   - package-ecosystem: github-actions
     directory: /
     schedule: { interval: monthly }
+    groups:
+      github-actions:
+        patterns: ["*"]
+  # One grouped pull request per month for Python packages
   - package-ecosystem: pip
     directory: /
     schedule: { interval: monthly }
+    groups:
+      python-packages:
+        patterns: ["*"]
