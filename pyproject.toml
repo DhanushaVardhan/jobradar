@@ -15,7 +15,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=8", "ruff==0.16.10"]
+dev = ["pytest>=8", "ruff==0.17.3"]
 
 [project.scripts]
 jobradar = "jobradar.cli:main"
